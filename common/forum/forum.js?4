@@ -1,0 +1,157 @@
+function DoPrompt(action, target) {
+	var revisedMessage;
+	var currentMessage = target.value;
+	
+	if (action == "url") {
+		var thisURL = prompt("Enter the URL for the link you want to add.", "http://");
+		if ( thisURL == null || thisURL == "" || thisURL == "http://" ) {
+			return;
+		}
+		var thisTitle = prompt("Enter the web site title", "Page Title");
+
+		if ( thisTitle == null || thisTitle == "" ) {
+			return;
+		}
+
+		var urlBBCode = "[URL="+thisURL+"]"+thisTitle+"[/URL]";
+		revisedMessage = currentMessage+urlBBCode;
+		target.value = revisedMessage;
+		target.focus();
+		return;
+	}
+	
+	if (action == "email") {
+		var thisEmail = prompt("Enter the email address you want to add.", "");
+
+		if ( thisEmail == null || thisEmail == "" ) {
+			return;
+		}
+
+		var emailBBCode = "[EMAIL]"+thisEmail+"[/EMAIL]";
+		revisedMessage = currentMessage+emailBBCode;
+		target.value = revisedMessage;
+		target.focus();
+		return;
+	}
+	
+	if (action == "bold") {
+		var thisBold = prompt("Enter the text that you want to make bold.", "");
+
+		if ( thisBold == null || thisBold == "" ) {
+			return;
+		}
+
+		var boldBBCode = "[B]"+thisBold+"[/B]";
+		revisedMessage = currentMessage+boldBBCode;
+		target.value = revisedMessage;
+		target.focus();
+		return;
+	}
+	
+	if (action == "italic") {
+		var thisItal = prompt("Enter the text that you want to make italic.", "");
+
+		if ( thisItal == null || thisItal == "" ) {
+			return;
+		}
+
+		var italBBCode = "[I]"+thisItal+"[/I]";
+		revisedMessage = currentMessage+italBBCode;
+		target.value = revisedMessage;
+		target.focus();
+		return;
+	}
+	
+	if (action == "image") {
+		var thisImage = prompt("Enter the URL for the image you want to display.", "http://");
+
+		if ( thisImage == null || thisImage == "" || thisImage == "http://" ) {
+			return;
+		}
+
+		var imageBBCode = "[IMG]"+thisImage+"[/IMG]";
+		revisedMessage = currentMessage+imageBBCode;
+		target.value = revisedMessage;
+		target.focus();
+		return;
+	}
+	
+	if (action == "quote") {
+		var quoteBBCode = "[QUOTE]  [/QUOTE]";
+		revisedMessage = currentMessage + quoteBBCode;
+		target.value = revisedMessage;
+		target.focus();
+		return;
+	}
+	
+	if (action == "code") {
+		var codeBBCode = "[CODE]  [/CODE]";
+		revisedMessage = currentMessage+codeBBCode;
+		target.value = revisedMessage;
+		target.focus();
+		return;
+	}
+	
+	if (action == "listopen") {
+		var liststartBBCode = "[LIST]";
+		revisedMessage = currentMessage+liststartBBCode;
+		target.value = revisedMessage;
+		target.focus();
+		return;
+	}
+	
+	if (action == "listclose") {
+		var listendBBCode = "[/LIST]";
+		revisedMessage = currentMessage+listendBBCode;
+		target.value = revisedMessage;
+		target.focus();
+		return;
+	}
+	
+	if (action == "listitem") {
+		var thisItem = prompt("Enter the new list item. Note that each list group must be preceeded by a List Close and must be ended with List Close.", "");
+		var itemBBCode = "[*]"+thisItem;
+		revisedMessage = currentMessage+itemBBCode;
+		target.value = revisedMessage;
+		target.focus();
+		return;
+	}
+}
+
+/* This script and many more are available free online at
+The JavaScript Source!! http://javascript.internet.com
+Created by: Cat Arriola :: http://astrodiva.journalspace.com */
+
+/**
+	TO USE: Insert the onLoad event handler into your BODY tag:
+		<BODY onload="fixImgs('photos', 108) // ('element ID', maximum width)
+*/
+function fixImgs(whichId, maxW) {
+	var el = document.getElementById(whichId);
+	var pix = [];
+	if( el != null ) pix = el.getElementsByTagName('img');
+  for (i=0; i<pix.length; i++) {
+    w=pix[i].width;
+    h=pix[i].height;
+    if (w > maxW) {
+      f=1-((w - maxW) / w);
+      pix[i].width=w * f;
+      pix[i].height=h * f;
+    }
+  }
+}
+
+function toggleForm() {
+	( jQuery('#messageform').css('display') != 'none' ) ? hideReplyForm() : showReplyForm();
+}
+
+function hideReplyForm() { jQuery('#messageform').hide(); }
+function showReplyForm() { jQuery('#messageform').show(); }
+
+function quoteMessage(id) {
+	showReplyForm();
+	el = jQuery('#message');
+	el.val( el.val() + '\n[quote="' + authors[id] + '"]' + posts[id] + "[/quote]" );
+}
+
+jQuery(document).ready( hideReplyForm );

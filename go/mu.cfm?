@@ -1,0 +1,87 @@
+
+<html>
+<head>
+	<title>Unsubscribe from mailing list</title>
+</head>
+
+<body>
+
+
+<style type="text/css">
+
+	body {
+		font-family: Arial, Verdana, "san-serif";
+		font-size: 69%;
+	}
+	
+	table, tr, td { padding: 0; margin: 0; }
+	
+	td { 
+		font-size: 0.8em;
+	}
+	
+	input {
+		font-size: 1em;
+	}
+	
+	#thankYou thead th p {
+		padding: 0.5em 1em;
+		font-size: 1.2em;
+		text-align: left;
+		color: #fff;
+		background-color: #888;
+	}
+
+	#thankYou td {
+		border: 1px solid #DEDEDE;
+		padding: 1em;
+	}
+	
+	#thankYou #mistake {
+		color: #888;
+		padding: 1em;
+	}
+	
+	#thankYou hr {
+		width: 80%;
+		margin-bottom: 0;
+	}
+	
+	#thankYou form {
+		text-align: center;
+	}
+	
+</style>
+	
+	<table width="100%" height="100%" cellspacing="0" cellpadding="0" id="unsubscribe">
+		<tr>
+			<td width="100%" height="100%" align="center" valign="middle">
+
+				
+
+						<p>We could not find your email address on our list.</p>
+
+						
+						<form action="mu.cfm" method="post">
+							<p>If you unsubscribe from our mailing list you won't get any more emails from us.</p> 
+							<p>Email: <input type="text" name="email" size="20" value="" /></p>
+
+							<div id="captcha">
+								Please type the text that appears in the picture below:<br>
+								<input type="text" name="captchaText" size="20"><br />
+
+								
+								<img src="/go/captcha-display?captcha_hr=5E4EBFE0-FBDC-F562-683F7D58317F2663" vSpace="10" border="1" />
+								<input name="captchaHash" type="hidden" value="5E4EBFE0-FBDC-F562-683F7D58317F2663" />
+							</div>
+							<input type="submit" value="Unsubscribe"><br />
+						</form>
+
+					
+			
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>

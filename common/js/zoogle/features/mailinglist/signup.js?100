@@ -1,0 +1,49 @@
+// dependencies
+// jquery.form
+// jquery.prompting-input
+jQuery(document).ready(function($) {
+	
+	var $messageWrap = null;
+	var $messageList = null;
+	
+	$('input#mailListSignUpEmail').prompting_input('Your email');
+	
+	$('#addToMailListForm').ajaxForm({
+		success: function(response) {
+			if( response['errors'] == null && response['messages'] == null ) {
+				displayMessages( ['An unknown error occurred trying to sign up'], true );
+				return;
+			}			
+			if( response.errors.length ) {
+				displayMessages( response.errors, true );
+			} else {
+				$('#addToMailListForm div').hide();
+				displayMessages( response.messages, false );
+			}
+		},
+		dataType: 'json'
+	});
+	
+	// displays an array of messages in the mail form
+	function displayMessages( messages, isError ) {
+		if($messageWrap == null) {
+			$messageWrap = $('<div class="messageWrap" />');
+			$messageList = $('<ul />');
+			$messageWrap.append($messageList).prependTo("#mailinglist-form");
+		}
+		if( isError ) $messageWrap.addClass('error').removeClass('notice');
+		else $messageWrap.removeClass('error').addClass('notice');
+		$messageList.empty();
+		for( var i = 0; i < messages.length; i++ ) {
+			$messageList.append('<li>' + messages[i] + '</li>' );
+		}
+		
+		var emailEl = $('#mailinglist-form #email');
+		if( isError ) {
+			emailEl.addClass('errorField');
+		} else {
+			emailEl.removeClass('errorField');
+		}
+	}
+	
+});

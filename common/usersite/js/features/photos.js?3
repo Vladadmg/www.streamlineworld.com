@@ -1,0 +1,30 @@
+// make the photos into nice rows
+jQuery(document).ready(function($) {
+	$('div.photos').each(function() {
+		var wrap = $(this);
+		var cellSize = (wrap.hasClass('small')) 
+			? 100
+			: (wrap.hasClass('medium'))
+				? 175
+				: 250;
+		cellSize += 50; // add on the padding
+		var cells = wrap.find('.cell');
+		if( cells.length == 1 ) {
+			// if we only have one photo then set the cell to the target width and 
+			// it will center itself
+			wrap.css('width', cellSize + 'px' );
+		} else {
+			var rowCells = Math.min( Math.floor( wrap.width() / cellSize ), cells.length );
+			if( rowCells < 1 ) rowCells = 1;
+			cells.each(function(i) {
+				if( (i % rowCells) == 0 ) {
+					// force the row to clear
+					$(this).before('<div class="new-row" />');
+				}
+			});
+			// force the wrapper to be centred
+			var t = (wrap.width() - ( cellSize * rowCells )) / 2;
+			if( t > 0 ) wrap.css('paddingLeft', t + 'px' );
+		}
+	});
+});

@@ -1,0 +1,525 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+		<html>
+			<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+						
+						<link href="http://assets.sitezoogle.com/templates/templatesource/23/css/template.css?1277844637"
+							 rel="stylesheet" type="text/css">
+					        
+
+				<link href="styles.css?11-1277844637" rel="stylesheet" type="text/css" />
+				<!--[if IE]><link href="styles-ie.css?11-1277844637" rel="stylesheet" type="text/css" /><![endif]-->
+				
+				<script type="text/javascript" src="http://assets.sitezoogle.com/common/js/zoogle/framed_musicplayer.js?1277844637"></script>
+				<script language="JavaScript" type="text/JavaScript">
+					function stopPlayer() {
+						jQuery("[zplayer]").jPlayer("pause");
+						//jQuery("[zplayer]").trigger("stop");
+                        if ( typeof(toggleOffButtons) == "function" ) {
+						   toggleOffButtons();
+                        }
+					}
+
+					
+						
+						if(isMusicPlayerOpen()) {
+							closeFramedMusicPlayer();
+						}
+					
+				</script>
+			
+				<script type="text/javascript" src="http://assets.sitezoogle.com/common/js/jquery/js/jquery-1.3.2.min.js?1277844637"></script>
+				<script type="text/javascript"> jQuery.noConflict(); </script>
+				
+				
+				<!--[if IE 6]>
+				<script type="text/javascript" src="/common/js/jquery/plugins/pngFix/jquery.pngFix.js"></script>
+				<style type="text/css">.navMenuHorizontal li.top { margin: 0 5px; }</style>
+				<script type="text/javascript">
+					jQuery(document).ready(function($){
+						// apply a wrapper to the link to make them work again after the PNG fix
+						// see: http://www.satzansatz.de/cssd/tmp/alphatransparency.html
+						$('.navMenu a.top').each(function() {
+							var $li = $(this).parent('li');
+							var bgIMG = $li.css('background-image');
+							if(bgIMG != null && bgIMG.indexOf(".png")!=-1){
+								$this = $(this);
+								// move the bg image & appropriate styles to the wrapper
+								$this.css({position: 'relative', zIndex: 1});
+								var styles = {'background-image': $li.css('background-image'), float: 'left' };
+								$(['padding-left','padding-right','padding-top','padding-bottom','width','height','background-repeat','background-position-x','background-position-y']).each(function() {
+									var t = $li.css( '' + this + '' );
+									if( t != null ) styles[this] = t;
+								})
+								$this.wrap($('<div></div>').css(styles));
+								$li.css('background-image', 'none');
+							}
+						});
+						// give subtitles 'hasLayout' so that the filter works appropriately
+						$('.subtitlewrap').css({zoom: '1'});
+						// finally fix the pngs
+						$('.navMenu li.top').pngFix();
+						// if we call it on all of them in one go then it only works for the first
+						// one and all the rest get missing background so we do them 1 by 1
+						$('.subtitlewrap').each(function() { $(this).pngFix(); } );
+					});
+				</script>
+				<![endif]-->
+		
+		
+				
+				<script type="text/javascript" src="http://assets.sitezoogle.com/common/js/jquery/plugins/bgiframe/jquery.bgiframe.js?1277844637"></script>
+				<script type="text/javascript" src="http://assets.sitezoogle.com/common/js/zoogle/jQuery.zoogleNav.js?1277844637"></script>
+	
+				<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$('.navMenu').zoogleNav({imageSuffix: 'png'});
+	
+						// replace all the flash elements with ones with wmode params so that the
+						// menu doesn't overlay on other Windows browsers (as IE uses bgiframe)
+						// could extract this to be re-usable
+						if( !$.browser.msie && window.navigator.userAgent.match( /Windows/ ) ) {
+							$('object').each(function() {
+								$this = $(this);
+								if( ! $('param[name=wmode]', $this ).length == 1 ) {
+									$targ = $this.clone();
+									$targ.append('<param name="wmode" value="opaque" />');
+									$('embed', $targ).attr('wmode', 'opaque');
+									$this.replaceWith($targ);
+								}
+							} );
+	
+							$('embed').each(function() {
+								$this = $(this);
+								if( $this.attr('wmode') == null ) {
+									$this.replaceWith($this.clone().attr('wmode', 'opaque'));
+								}
+							});
+						}
+					});
+				</script>
+			<title>Streamline - newsarchive</title>
+			<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+			
+					<meta name="keywords" content="Streamline, DisHarmony, Disharmony,
+Dis Harmony, Dis harmony, Mike Hogan, Streamline World, Streamline Music, Streamline Band, streamline, streamline world, streamline music, streamline band, Something Corporate, SoCo" />
+				
+					<link rel="shortcut icon"
+						href="http://content.bandzoogle.com/users/Streamline/images/favicon.ico?9"
+						type="image/vnd.microsoft.icon" />
+				
+		        <script type="text/javascript" src="http://assets.sitezoogle.com/common/js/jplayer/jquery.jplayer.js?1277844637"></script>
+			    <script type="text/javascript" src="http://assets.sitezoogle.com/common/js/jquery/plugins/jquery.cookie.js?1277844637"></script>
+			    <script type="text/javascript" src="http://assets.sitezoogle.com/common/js/zoogle/zoogle-player.js?1277844637"></script>
+              
+				<script type="text/javascript">
+					var _gaq = _gaq || [];
+					_gaq.push(['_setAccount', 'UA-13013790-1']);
+					
+					_gaq.push(['_trackPageview']);
+
+					(function() {
+						var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+						ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+					})();
+				</script>
+				
+
+			<link href="http://assets.sitezoogle.com/common/js/facebox/facebox.css?1277844637" rel="stylesheet" type="text/css">
+			<script type="text/javascript" src="http://assets.sitezoogle.com/common/js/facebox/facebox.js?1277844637"></script>
+
+			<script type="text/javascript">
+				jQuery(document).ready(function($) {
+					$.fn.facebox({
+						opacity      : 0.1,
+						loadingImage : 'http://assets.sitezoogle.com/common/js/facebox/loading.gif?1277844637',
+						closeImage   : 'http://assets.sitezoogle.com/common/js/facebox/closelabel.gif?1277844637'
+					});
+				});
+				// Apply behaviors to any new content loaded in the facebox div.
+				jQuery(document).bind('afterReveal.facebox', function() {
+					jQuery('#facebox a[rel*=facebox]').each(function() {
+						jQuery(this).facebox();
+					});
+					jQuery('#facebox input[class*=facebox]').each(function() {
+						jQuery(this).facebox();
+					});
+				});
+			</script>
+		<link href="http://assets.sitezoogle.com/common/usersite/css/features.css?1277844637" rel="stylesheet" type="text/css" media="screen" /><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/go/blogrss?id=9655" />
+	<script type="text/javascript">
+	try {
+		Object.extend(Function.prototype, { substr: function() { var __method = this; return function() { return ""; } } });
+	}
+	catch (e) {}
+	</script>
+
+	<script type="text/javascript">
+	var addthis_config = {
+	    ui_click: true, /* normally would disable mouseover behavior */
+		username: "bandzoogle"
+	}
+	</script>
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
+	
+			</head>
+			<body class="base">
+				<div class="container" id="container">
+					
+					<div class="header clear">
+						
+						<div class="header-graphic"><img src="http://content.bandzoogle.com/users/Streamline/images/45496.jpg?7" alt="Streamline" /></div> <div class="navigation clear"><ul class="navMenu navMenuHorizontal"><li class="top"><a href="home.cfm"class="top"><img src="http://content.bandzoogle.com/users/Streamline/images/button-home.png?26" alt="Home"  width="55" height="50" class="rollover" /></a></li><li class="top"><a href="gigs.cfm"class="top"><img src="http://content.bandzoogle.com/users/Streamline/images/button-gigs.png?26" alt="Gigs"  width="40" height="50" class="rollover" /></a><ul><li><a href="giglist.cfm">Gig List</a></li><li><a href="ontheroad.cfm">On The Road</a></li><li><a href="pics.cfm">Pics</a></li></ul></li><li class="top"><a href="media.cfm"class="top"><img src="http://content.bandzoogle.com/users/Streamline/images/button-media.png?26" alt="Media"  width="55" height="50" class="rollover" /></a><ul><li><a href="bandphotos.cfm">Band Photos</a></li><li><a href="discslyrics.cfm">Discs &amp; Lyrics</a></li><li><a href="sounds.cfm">Sounds</a></li><li><a href="videos.cfm">Videos</a></li></ul></li><li class="top"><a href="store.cfm"class="top"><img src="http://content.bandzoogle.com/users/Streamline/images/button-store.png?26" alt="Store"  width="49" height="50" class="rollover" /></a></li><li class="top"><a href="streamteams.cfm"class="top"><img src="http://content.bandzoogle.com/users/Streamline/images/button-streamteams.png?26" alt="Stream Teams"  width="122" height="50" class="rollover" /></a><ul><li><a href="campusreps.cfm">CampusReps</a></li><li><a href="chatter.cfm">Chatter</a></li><li><a href="mailinglist.cfm">Mailing List</a></li><li><a href="newsarchive.cfm">News Archive</a></li><li><a href="streamteam.cfm">StreamTeam</a></li></ul></li><li class="top"><a href="presskitbios.cfm"class="top"><img src="http://content.bandzoogle.com/users/Streamline/images/button-presskitbios.png?26" alt="Press Kit Bios"  width="113" height="50" class="rollover" /></a></li><li class="top"><a href="contacts.cfm"class="top"><img src="http://content.bandzoogle.com/users/Streamline/images/button-contacts.png?26" alt="Contacts"  width="75" height="50" class="rollover" /></a></li></ul></div>
+					</div>
+					
+					
+					
+					
+					<div class="content-top"></div>
+					<div class="clear">
+						
+						<div class="content"> 
+			<table width="100%" cellspacing="8">
+				
+
+					<tr>
+						
+							<td colspan="2" valign="top">
+								<div class="layout layout-full">
+									
+											<a name="a483650_43578" 
+												id="a483650_43578" style="display:hidden"> </a>
+											
+
+	<div class="blog">
+		<div class="blog-container no-archives">
+			<a href="/fr_newsarchive.cfm">&laquo; view all posts</a><br /><br /> 
+	
+	<div class="blog-post">
+		<h1 class="blog-post-title title"><a href="/fr_newsarchive.cfm?feature=43578&amp;postid=39926">Streamline News - LYRICS TO NEW CD</a> </h1>
+		<div>
+			<br />
+LYRICS TO NEW CD<br />
+So in an effort to preempt the inevitable bewilderment and resultant bombardment of emails wondering what the hell it is I'm saying in these songs, I have decided to post the lyrics for the new CD. Annunciation has never been one of my strongest suits, so hopefully this will clear up any confusion that can and often does occur whenever I open my mouth to sing. Although it is pretty amusing to hear what people come up with (&quot;far away and long beyond the apple tree&quot;, &quot;you probably wish the bullet had caught my head, but it landed in my butt instead&quot; etc.) I thought you might like to see what I'm actually saying, even if it doesn't sound like it. Anyway, I hope you like them.<br />
+<br />
+p.s. I don't have the lyrics for &quot;Anything&quot; or &quot;Let Go&quot; on my computer and would feel uncomfortable posting them without first consulting with Brian (the author of those two), but I will see if he wants to post them as well.<br />
+<br />
+Arson &amp; Alchemy<br />
+<br />
+I once believed divine decree<br />
+But all the years have poisoned me,<br />
+With a flagrant apathy<br />
+<br />
+Oh I never lost control at all,<br />
+I just gave into the greatest lie that the world has ever known<br />
+<br />
+I could&rsquo;ve been so much more than I am<br />
+<br />
+Well I&rsquo;m still breathing<br />
+though not all I was meant to be yet<br />
+Can you heal me alchemy?<br />
+<br />
+Make me a sire of gold<br />
+And I&rsquo;ll set fire to the world<br />
+Cause I&rsquo;ve got years to burn<br />
+before I&rsquo;m gone<br />
+<br />
+I used to fan the flames but now,<br />
+I want to be the wind that blows from the hand that wrote it all<br />
+<br />
+I&rsquo;ve been first star wishing<br />
+For a Midas Affliction<br />
+From Chrysopoeiate addiction<br />
+But I&rsquo;m still so far off<br />
+<br />
+I want to be so much more than I am<br />
+<br />
+Well I&rsquo;m still breathing,<br />
+Though not all I was meant to be yet<br />
+Can you heal me Alchemy?<br />
+<br />
+Make me a sire of gold<br />
+And I&rsquo;ll set fire to the world<br />
+Cause I&rsquo;ve got years to burn<br />
+Before I&rsquo;m gone<br />
+<br />
+Hurricane<br />
+<br />
+You shimmer like the Northern Star and I&rsquo;m just the guy with the telescope on the ground<br />
+You&rsquo;re rushing like a waterfall and I&rsquo;m just the dribbling of a faucet that won&rsquo;t turn off<br />
+I got concrete shoes, and you&rsquo;re strapped to rockets,<br />
+If it&rsquo;s sink or swim, then I&rsquo;m swiftly drowning<br />
+I&rsquo;m on the ocean floor and you&rsquo;re out of the atmosphere<br />
+<br />
+Why do I not see this coming?<br />
+The more I try, the less you&rsquo;re enamored<br />
+When it all plays out, well who was I kidding?<br />
+To say you&rsquo;re out of my league doesn&rsquo;t start to explain it<br />
+I&rsquo;m a drop of rain and baby you&rsquo;re a hurricane<br />
+<br />
+I whipped out the big guns, aimed to impress,<br />
+centered those cross-hairs on your chest<br />
+crossed my fingers, pulled the trigger<br />
+just hoping for the best<br />
+you probably wish the bullet had caught my head<br />
+but it landed in my foot instead<br />
+<br />
+Why do I not see this coming?<br />
+The more I try, the less you&rsquo;re enamored<br />
+When it all plays out, well who was I kidding?<br />
+To say you&rsquo;re out of my league is a kind understatement<br />
+I&rsquo;m a drop of rain and baby you&rsquo;re a hurricane<br />
+<br />
+Those chemicals made synapses fire,<br />
+made illogical seem probable<br />
+Like a cannon ball, I&rsquo;m bound to soar and fall<br />
+I&rsquo;m just a lead balloon, you&rsquo;re anti-gravitational.<br />
+And I&rsquo;m out of my head<br />
+<br />
+Why do I not see this coming?<br />
+When the more I try, the less you&rsquo;re enamored<br />
+When it all plays out, well who was I kidding?<br />
+To say you&rsquo;re out of my league doesn&rsquo;t start to explain it<br />
+I&rsquo;m just a drop of rain and baby you&rsquo;re a&hellip;<br />
+<br />
+But if I had what I want, I&rsquo;d get you off and I&rsquo;d turn you on<br />
+And I&rsquo;d have what I need, to bring down a goddess to her knees<br />
+I&rsquo;d sell my soul to know, what to give to the girl who&rsquo;s got it all<br />
+I&rsquo;d conjure the winds to blow and knock you off of that pedestal<br />
+I&rsquo;m calling your bluff, and I bet it all so you better fold<br />
+If I don&rsquo;t strike gold, what&rsquo;s left to give when you got it all?<br />
+<br />
+Ghost<br />
+<br />
+A single ray of light is dancing in a darkened room<br />
+it penetrates an eye close-by, but the black is not removed<br />
+the face in which the eye resides is a mix of cloth and stone<br />
+a pale linen veil draped over withered bones<br />
+<br />
+She hovers like a moth over the flame,<br />
+But it&rsquo;s not the light she needs, only the heat it brings<br />
+And as I watch the powder start to change<br />
+I know where seven years have gone to waste<br />
+<br />
+I would give the world<br />
+To go back all those years<br />
+And stop you at the start<br />
+before you disappeared<br />
+<br />
+I&rsquo;ll be there for you when I can<br />
+just show me there&rsquo;s yet something there<br />
+that&rsquo;s still worth fighting for<br />
+<br />
+The world around her is just spinning like a carousel<br />
+All attempts to revert back to normalcy have quickly failed<br />
+As her immortality is sizzling on a silver spoon<br />
+She&rsquo;ll contemplate the point in space and then create the wound<br />
+<br />
+I do not know this solemn ghost<br />
+It&rsquo;s not the human I recall<br />
+her shell&rsquo;s remained the same<br />
+But all the hope in her is gone<br />
+<br />
+I would give the world<br />
+To go back all those years<br />
+And stop you at the start<br />
+before you disappeared<br />
+<br />
+I&rsquo;ll be there for you when I can<br />
+just show me there&rsquo;s yet something there<br />
+that&rsquo;s still worth fighting for<br />
+<br />
+save me<br />
+save me<br />
+save me<br />
+come on say<br />
+save me<br />
+save me<br />
+save me<br />
+and I&rsquo;ll replace the flame<br />
+<br />
+my little ray of light is dancing in a cloud she made<br />
+I wish she&rsquo;d come back down where it is safe<br />
+And stay<br />
+<br />
+Thick &amp; Thin<br />
+<br />
+In the glow of a street light,<br />
+when the night cloaks her shame,<br />
+she looks for love and the comfort of a hollow embrace<br />
+And though it offers her gold, and brief escape from the cold<br />
+She&rsquo;s after something much more than simply warming her bones<br />
+<br />
+She says, &ldquo;a few lays, alleviate the sharp pangs of hunger,<br />
+But a heartbeat&rsquo;s still all I have&rdquo;<br />
+<br />
+And she says, &ldquo;I want someone to love me just the way I am, just the way I am&rdquo;<br />
+She says, &ldquo;I want someone beside me whether lose or win, through thick and thin&rdquo;<br />
+<br />
+In the blaze of the limelight<br />
+To unanimous pride<br />
+She outshines every diamond in a starlet&rsquo;s sky<br />
+But she&rsquo;s shrouded in darkness like a waning moon<br />
+she knows there&rsquo;s much more to her than is seen by the world<br />
+<br />
+She says, &ldquo;I can&rsquo;t find peace of mind when nobody knows me<br />
+And a heartthrob is all I am&rdquo;<br />
+<br />
+And she says, &ldquo;I want someone to love me just the way I am, just the way I am&rdquo;<br />
+She says, &ldquo;I want someone beside me whether lose or win, oh through thick and thin&rdquo;<br />
+<br />
+&ldquo;When the light fades to night brings the cold rain and thunder<br />
+When a desert sun, is burning up every drop of hope there under<br />
+Be an anchor in an ocean of change&rdquo;<br />
+And she says, &ldquo;I want someone to love me just the way I am, just the way I am&rdquo;<br />
+<br />
+&ldquo;Say to me, come on and say to me<br />
+Say you&rsquo;ll love me just the way I am, just the way I am<br />
+Stay beside me whether lose or win oh through thick and thin&rdquo;<br />
+<br />
+Navigator<br />
+I like the way you look tonight<br />
+Wearing only moonlight<br />
+You sparked a fire<br />
+And I am smoldering<br />
+You feign indifference darling,<br />
+But I feel you trembling<br />
+You&rsquo;re trying so hard<br />
+To not be physical<br />
+Why even fight it child,<br />
+When it&rsquo;s this natural?<br />
+<br />
+When we&rsquo;re all alone and no one needs to know<br />
+Without a single light on<br />
+<br />
+Let me be the navigator, and I will guide you<br />
+I know you&rsquo;re scared to fly, let me ease your mind<br />
+If I&rsquo;m the navigator you&rsquo;ll be alright<br />
+we&rsquo;ll find euphoria before sunrise<br />
+<br />
+I like the way you hesitate,<br />
+Often lust so prolonged can be the right kind of wrong<br />
+For you,<br />
+You say you&rsquo;re bound by a circle so you can&rsquo;t acquiesce<br />
+You should rely on your senses cause it&rsquo;s senseless distress<br />
+To deny what your conscience screams is<br />
+A consequent-less trip<br />
+Cause no one needs to know<br />
+<br />
+We&rsquo;re all alone, so why just dip your toes?<br />
+Why not breathe in deep and dive down?<br />
+<br />
+Let me be the navigator, and I will guide you<br />
+I know you&rsquo;re scared to fly, let me ease your mind<br />
+If I&rsquo;m the navigator you&rsquo;ll be alright<br />
+we&rsquo;ll find euphoria before sunrise<br />
+<br />
+Drip drops that poison thawing from her mind,<br />
+Adrift at last, she&rsquo;s swimming in the sky<br />
+And all her doubts are far behind<br />
+And she falls in love<br />
+Her body ebbs in the undulating tide,<br />
+Blanketed in stars, she whispers the night<br />
+That all I am is all she needs<br />
+And she falls in love<br />
+		</div>
+
+		
+
+		<div class="blog-post-meta">
+			<span class="localdate" title="America/New_York time zone">Apr 20, 2009</span> 
+				<a href="#comments">Add comment</a>
+			
+			<a class="addthis_button" href="http://www.addthis.com/bookmark.php" addthis:url="http://streamlineworld.com/fr_newsarchive.cfm?feature=43578&postid=39926" addthis:title="Streamline News - LYRICS TO NEW CD">Share</a>
+		</div>
+
+	</div>
+<div class="blog-footer-rss-link">
+		<a href="/go/blogrss?id=9655"
+			title="subscribe to this this blog via RSS"><img class="page-button"
+			src="/common/images/rss-button.gif" width="36" height="14"
+			alt="rss" /></a>
+	</div> 
+
+<a name="comments"></a>
+<h2 class="blog-comment-title">Leave Comment:</h2>
+
+<a name="comment-form"></a>
+
+	<div class="add-comment">
+		
+					<p class="admin-info">Please <a href="go/members?members_action=loginform" rel="facebox">log-in</a> or <a href="go/members?members_action=registerform" rel="facebox">register</a> to have your photo appear beside your comment.</p>
+				
+			
+			<form method="post" name="blogcommentform" id="blogcommentform" action="/fr_newsarchive.cfm?blog_action=addcomment">
+				<input type="hidden" name="_formName" value="483650_43578"><input type="hidden" name="_return" value="/newsarchive.cfm?postid=39926&feature=43578#comment-form"><span style="display:none;"><input id="profession" name="profession" size="30" type="text" value="" /></span> 
+				
+				<div style="display:none;"><input id="occupation" name="occupation" size="30" type="text" value="" /></div>
+				
+					<p>
+						<strong>Name:</strong><br> 
+						<input class="standard" type="text" name="postedby" value="" />
+					</p>
+				
+				<p>
+					<strong>Comment:</strong><br>
+					<textarea rows="10" cols="50" tabindex="3" class="standard" name="message" id="message"></textarea>
+				</p>
+				<div>
+					
+						<p class="captcha"><strong>Enter the following security word:</strong>
+							<br>
+							<img src="/go/captcha-display?captcha_hr=EFFF3DD0-D582-7015-9396597FB0A064C1" style="margin: 5px 0;" /><br>
+							<input class="standard" type="text" name="captchaText" />
+							<input name="captchaHash" type="hidden" value="EFFF3DD0-D582-7015-9396597FB0A064C1" />
+						</p>
+					
+					<p>
+						<input type="hidden" name="postid" value="39926">
+						<input type="hidden" name="blog_action" value="addcomment">
+						<input class="button" type="submit" value="post comment" name="submit">
+					</p>
+				</div>
+			</form>
+			
+		
+	</div>
+
+		</div>
+		
+		
+	</div>
+
+								</div>
+							</td>
+						
+					</tr>
+				
+			</table>
+			</div>
+					</div>
+					
+					<div class="content-bottom"></div>
+					
+					
+
+					<div class="footer clear"></div>
+					
+				</div>
+				
+				
+				<script type="text/javascript" src="http://assets.sitezoogle.com/common/js/jquery/plugins/jquery.timer.js?1277844637"></script>
+				<script type="text/javascript" src="http://assets.sitezoogle.com/common/js/jquery/ajaxCFC/js/jquery.AjaxCFC.js?1277844637"></script>
+				
+				<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$('a[rel*=facebox]').each(function() {
+							var el = $(this);
+							el.facebox();
+						});
+					});
+				</script>
+			 <div class="footertext"></div>
+			</body>
+		</html>
+	

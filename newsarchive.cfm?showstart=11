@@ -1,0 +1,431 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+		<html>
+			<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+						
+						<link href="http://assets.sitezoogle.com/templates/templatesource/23/css/template.css?1277844637"
+							 rel="stylesheet" type="text/css">
+					        
+
+				<link href="styles.css?11-1277844637" rel="stylesheet" type="text/css" />
+				<!--[if IE]><link href="styles-ie.css?11-1277844637" rel="stylesheet" type="text/css" /><![endif]-->
+				
+				<script type="text/javascript" src="http://assets.sitezoogle.com/common/js/zoogle/framed_musicplayer.js?1277844637"></script>
+				<script language="JavaScript" type="text/JavaScript">
+					function stopPlayer() {
+						jQuery("[zplayer]").jPlayer("pause");
+						//jQuery("[zplayer]").trigger("stop");
+                        if ( typeof(toggleOffButtons) == "function" ) {
+						   toggleOffButtons();
+                        }
+					}
+
+					
+						
+						if(isMusicPlayerOpen()) {
+							closeFramedMusicPlayer();
+						}
+					
+				</script>
+			
+				<script type="text/javascript" src="http://assets.sitezoogle.com/common/js/jquery/js/jquery-1.3.2.min.js?1277844637"></script>
+				<script type="text/javascript"> jQuery.noConflict(); </script>
+				
+				
+				<!--[if IE 6]>
+				<script type="text/javascript" src="/common/js/jquery/plugins/pngFix/jquery.pngFix.js"></script>
+				<style type="text/css">.navMenuHorizontal li.top { margin: 0 5px; }</style>
+				<script type="text/javascript">
+					jQuery(document).ready(function($){
+						// apply a wrapper to the link to make them work again after the PNG fix
+						// see: http://www.satzansatz.de/cssd/tmp/alphatransparency.html
+						$('.navMenu a.top').each(function() {
+							var $li = $(this).parent('li');
+							var bgIMG = $li.css('background-image');
+							if(bgIMG != null && bgIMG.indexOf(".png")!=-1){
+								$this = $(this);
+								// move the bg image & appropriate styles to the wrapper
+								$this.css({position: 'relative', zIndex: 1});
+								var styles = {'background-image': $li.css('background-image'), float: 'left' };
+								$(['padding-left','padding-right','padding-top','padding-bottom','width','height','background-repeat','background-position-x','background-position-y']).each(function() {
+									var t = $li.css( '' + this + '' );
+									if( t != null ) styles[this] = t;
+								})
+								$this.wrap($('<div></div>').css(styles));
+								$li.css('background-image', 'none');
+							}
+						});
+						// give subtitles 'hasLayout' so that the filter works appropriately
+						$('.subtitlewrap').css({zoom: '1'});
+						// finally fix the pngs
+						$('.navMenu li.top').pngFix();
+						// if we call it on all of them in one go then it only works for the first
+						// one and all the rest get missing background so we do them 1 by 1
+						$('.subtitlewrap').each(function() { $(this).pngFix(); } );
+					});
+				</script>
+				<![endif]-->
+		
+		
+				
+				<script type="text/javascript" src="http://assets.sitezoogle.com/common/js/jquery/plugins/bgiframe/jquery.bgiframe.js?1277844637"></script>
+				<script type="text/javascript" src="http://assets.sitezoogle.com/common/js/zoogle/jQuery.zoogleNav.js?1277844637"></script>
+	
+				<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$('.navMenu').zoogleNav({imageSuffix: 'png'});
+	
+						// replace all the flash elements with ones with wmode params so that the
+						// menu doesn't overlay on other Windows browsers (as IE uses bgiframe)
+						// could extract this to be re-usable
+						if( !$.browser.msie && window.navigator.userAgent.match( /Windows/ ) ) {
+							$('object').each(function() {
+								$this = $(this);
+								if( ! $('param[name=wmode]', $this ).length == 1 ) {
+									$targ = $this.clone();
+									$targ.append('<param name="wmode" value="opaque" />');
+									$('embed', $targ).attr('wmode', 'opaque');
+									$this.replaceWith($targ);
+								}
+							} );
+	
+							$('embed').each(function() {
+								$this = $(this);
+								if( $this.attr('wmode') == null ) {
+									$this.replaceWith($this.clone().attr('wmode', 'opaque'));
+								}
+							});
+						}
+					});
+				</script>
+			<title>Streamline - newsarchive</title>
+			<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+			
+					<meta name="keywords" content="Streamline, DisHarmony, Disharmony,
+Dis Harmony, Dis harmony, Mike Hogan, Streamline World, Streamline Music, Streamline Band, streamline, streamline world, streamline music, streamline band, Something Corporate, SoCo" />
+				
+					<link rel="shortcut icon"
+						href="http://content.bandzoogle.com/users/Streamline/images/favicon.ico?9"
+						type="image/vnd.microsoft.icon" />
+				
+		        <script type="text/javascript" src="http://assets.sitezoogle.com/common/js/jplayer/jquery.jplayer.js?1277844637"></script>
+			    <script type="text/javascript" src="http://assets.sitezoogle.com/common/js/jquery/plugins/jquery.cookie.js?1277844637"></script>
+			    <script type="text/javascript" src="http://assets.sitezoogle.com/common/js/zoogle/zoogle-player.js?1277844637"></script>
+              
+				<script type="text/javascript">
+					var _gaq = _gaq || [];
+					_gaq.push(['_setAccount', 'UA-13013790-1']);
+					
+					_gaq.push(['_trackPageview']);
+
+					(function() {
+						var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+						ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+					})();
+				</script>
+				
+
+			<link href="http://assets.sitezoogle.com/common/js/facebox/facebox.css?1277844637" rel="stylesheet" type="text/css">
+			<script type="text/javascript" src="http://assets.sitezoogle.com/common/js/facebox/facebox.js?1277844637"></script>
+
+			<script type="text/javascript">
+				jQuery(document).ready(function($) {
+					$.fn.facebox({
+						opacity      : 0.1,
+						loadingImage : 'http://assets.sitezoogle.com/common/js/facebox/loading.gif?1277844637',
+						closeImage   : 'http://assets.sitezoogle.com/common/js/facebox/closelabel.gif?1277844637'
+					});
+				});
+				// Apply behaviors to any new content loaded in the facebox div.
+				jQuery(document).bind('afterReveal.facebox', function() {
+					jQuery('#facebox a[rel*=facebox]').each(function() {
+						jQuery(this).facebox();
+					});
+					jQuery('#facebox input[class*=facebox]').each(function() {
+						jQuery(this).facebox();
+					});
+				});
+			</script>
+		<link href="http://assets.sitezoogle.com/common/usersite/css/features.css?1277844637" rel="stylesheet" type="text/css" media="screen" /><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/go/blogrss?id=9655" />
+	<script type="text/javascript">
+	try {
+		Object.extend(Function.prototype, { substr: function() { var __method = this; return function() { return ""; } } });
+	}
+	catch (e) {}
+	</script>
+
+	<script type="text/javascript">
+	var addthis_config = {
+	    ui_click: true, /* normally would disable mouseover behavior */
+		username: "bandzoogle"
+	}
+	</script>
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
+	
+			</head>
+			<body class="base">
+				<div class="container" id="container">
+					
+					<div class="header clear">
+						
+						<div class="header-graphic"><img src="http://content.bandzoogle.com/users/Streamline/images/45496.jpg?7" alt="Streamline" /></div> <div class="navigation clear"><ul class="navMenu navMenuHorizontal"><li class="top"><a href="home.cfm"class="top"><img src="http://content.bandzoogle.com/users/Streamline/images/button-home.png?26" alt="Home"  width="55" height="50" class="rollover" /></a></li><li class="top"><a href="gigs.cfm"class="top"><img src="http://content.bandzoogle.com/users/Streamline/images/button-gigs.png?26" alt="Gigs"  width="40" height="50" class="rollover" /></a><ul><li><a href="giglist.cfm">Gig List</a></li><li><a href="ontheroad.cfm">On The Road</a></li><li><a href="pics.cfm">Pics</a></li></ul></li><li class="top"><a href="media.cfm"class="top"><img src="http://content.bandzoogle.com/users/Streamline/images/button-media.png?26" alt="Media"  width="55" height="50" class="rollover" /></a><ul><li><a href="bandphotos.cfm">Band Photos</a></li><li><a href="discslyrics.cfm">Discs &amp; Lyrics</a></li><li><a href="sounds.cfm">Sounds</a></li><li><a href="videos.cfm">Videos</a></li></ul></li><li class="top"><a href="store.cfm"class="top"><img src="http://content.bandzoogle.com/users/Streamline/images/button-store.png?26" alt="Store"  width="49" height="50" class="rollover" /></a></li><li class="top"><a href="streamteams.cfm"class="top"><img src="http://content.bandzoogle.com/users/Streamline/images/button-streamteams.png?26" alt="Stream Teams"  width="122" height="50" class="rollover" /></a><ul><li><a href="campusreps.cfm">CampusReps</a></li><li><a href="chatter.cfm">Chatter</a></li><li><a href="mailinglist.cfm">Mailing List</a></li><li><a href="newsarchive.cfm">News Archive</a></li><li><a href="streamteam.cfm">StreamTeam</a></li></ul></li><li class="top"><a href="presskitbios.cfm"class="top"><img src="http://content.bandzoogle.com/users/Streamline/images/button-presskitbios.png?26" alt="Press Kit Bios"  width="113" height="50" class="rollover" /></a></li><li class="top"><a href="contacts.cfm"class="top"><img src="http://content.bandzoogle.com/users/Streamline/images/button-contacts.png?26" alt="Contacts"  width="75" height="50" class="rollover" /></a></li></ul></div>
+					</div>
+					
+					
+					
+					
+					<div class="content-top"></div>
+					<div class="clear">
+						
+						<div class="content"> 
+			<table width="100%" cellspacing="8">
+				
+
+					<tr>
+						
+							<td colspan="2" valign="top">
+								<div class="layout layout-full">
+									
+											<a name="a483650_43578" 
+												id="a483650_43578" style="display:hidden"> </a>
+											
+
+	<div class="blog">
+		<div class="blog-container no-archives">
+			
+	
+	<div class="blog-post">
+		<h1 class="blog-post-title title"><a href="/newsarchive.cfm?feature=43578&amp;postid=20532">Newsletter Jan 9, 2008</a> </h1>
+		<div>
+			Hi!  Hope everyone had a great holiday.<br />
+<br />
+CALIFORNIA SHOWS!  We'll be playing several shows in California during January - two are this week - there will be more later this month.  Check the <a href="./giglist.cfm">schedule</a> for details.  Hope to see you there.<br />
+<br />
+Jan 10, The Derby, Los Angeles, CA<br />
+Jan 11, The Coach House, San Juan Capistrano, CA<br />
+<br />
+GOT STREAMLINE?  The &quot;#1 EP of 2007!&quot; is available in <a href="./store.cfm">the Streamline Store</a> along with hoodies, Ts and downloads.<br />
+<br />
+YOU CAN HELP:  The Dave Matthews Band is polling its fan base to see what artist(s) you would like to see perform as support act(s) on the 2008 tour!  We'd appreciate if you would mention us to Dave.  We probably won't make the lineup this year, but a good response could plant a seed for future years.  <a href="http://web.davematthewsband.com/08OpenerSurvey/08OpenerSurvey.asp">Here's the link to participate in the poll.</a>  Thanks for your help.<br />
+<br />
+WE'RE MOVING:  In February, we're relocating from LA to Baton Rouge, Louisiana.  Baton Rouge is famous for being the home of the #1 college football team, the LSU Tigers and the hometown of SL guitarist Brad Ourso - a LSU alum.<br />
+<br />
+PASS IT ON:  Please fell free to forward this note to folks who would be interested.  Thanks<br />
+<br />
+CHANGING EMAILS? NOT ON OUR LIST? <a href="http://www.streamlineworld.com">Please sign up</a> to receive the latest news on Streamline's activities.<br />
+<br />
+Thanks for everything,<br />
+Mike, Jon, John, Brian, Brad<br />
+<br />
+Checkout Streamline news &amp; music:<br />
+<a href="http://www.streamlineworld.com">www.streamlineworld.com</a><br />
+<a href="http://www.myspace.com/streamlineny">www.myspace.com/streamlineny</a><br />
+<a href="http://www.youtube.com/streamlineworld">www.youtube.com/streamlineworld</a>
+		</div>
+
+		
+
+		<div class="blog-post-meta">
+			<span class="localdate" title="America/New_York time zone">Jan 20, 2008</span> 
+				<a href="/newsarchive.cfm?postid=20532&feature=43578#comments">Add comment</a>
+			
+			<a class="addthis_button" href="http://www.addthis.com/bookmark.php" addthis:url="http://streamlineworld.com/newsarchive.cfm?feature=43578&postid=20532" addthis:title="Newsletter Jan 9, 2008">Share</a>
+		</div>
+
+	</div>
+
+	
+	<div class="blog-post">
+		<h1 class="blog-post-title title"><a href="/newsarchive.cfm?feature=43578&amp;postid=20530">News Items 6/2005 - 4/2007</a> </h1>
+		<div>
+			4/2007<br />
+The Band is Finally Complete!<br />
+<br />
+We are happy to announce that after years of searching we have finally found a permanent guitarist.  Brad Ourso hails from Baton Rouge Louisiana and is no stranger to the world of music.  He has performed in various bands since he was 15 and proved to be the perfect fit in every way.  We were fortunate to be able to have Brad contribute to our latest recording and he will be joining us for our shows back on the east coast.  Please help us welcome him to the group by sending him a comment or message on myspace, or by dropping him an email at Brad@streamlineworld.com. <br />
+<br />
+12/2006<br />
+The Search is Over&hellip;Streamline Celebrates New Member<br />
+<br />
+We are pleased to announce that after almost two years of searching, the position of drummer has finally been filled. This week Streamline welcomed veteran musician Brian Ireland (of Something Corporate and William Tell) to the group. Brian, a California native first began his involvement with the band in the summer of 2005 when he was enlisted to play drums on a recording of the newly completed song &lsquo;All I Need&rsquo;. In the year and a half since Brian has remained a mentor and a friend to all of us, and his commitment to the band has been unwavering. We are all very excited and enthusiastic about what the future will bring and are anxious to begin this new chapter of evolution for our band. Thanks again to all of you for listening, and please help us in welcoming Brian to the group.<br />
+<br />
+Drop Brian a line and say hello... brian@streamlineworld.com<br />
+<br />
+8/24/06<br />
+New Pics/Video Coming Soon<br />
+<br />
+We will be posting a lot of pictures of Streamline's new Hollywood home early next week.  So be sure to keep checking back for those.  <br />
+<br />
+8/22/06 <br />
+More Updates/New Gig Listing <br />
+<br />
+Well its been a month since our arrival on the west coast, but we&rsquo;re finally all settled in. We&rsquo;ll be adding some pictures in the next week of our new home in Hollywood, as well as some other clips, so be sure to keep checking back for that. Although our website and myspace page have been somewhat stagnant lately, we are in the process of reviving both with the intention of making each a fully functional means of communication. We will be updating both regularly and doing our very best to keep everyone up to date on the latest happenings. We will also be making a greater effort to reply to all of your emails and comments. We are flattered by your continued support and interest and we promise to be better at responding to your messages. <br />
+<br />
+At this time we have also posted a new show listing on the gig page. It will be an acoustic set on September 27th at 8:30 p.m. at Highland Ground in Los Angeles. The door charge will be $5. We hope to see you there. In other news, the band has been working on some new material to be recorded in the very near future. We will keep you all posted on the progress of that, so definitely keep checking back for the latest news. In the mean time, we thank you all for your patience and hope you all are well and enjoying these last days of summer. <br />
+<br />
+7/25/06<br />
+An Overdue Update<br />
+<br />
+Thank you everyone for your continued support throughout the last few months, we&rsquo;ve been making a lot of changes and have inadvertently neglected to keep you all informed. So here&rsquo;s what&rsquo;s been happening with us the last few weeks.<br />
+<br />
+We decided after seven months of being in NYC that it just wasn&rsquo;t the place for us. We were unsuccessful in finding musicians to complete the group and our creativity level was very low. It just didn&rsquo;t feel like the right environment for us to do what we hoped to get accomplished. So in late April we left the city and moved back to Rochester where we saved up some cash and played a few shows. Now, following in our footsteps from last year, we have once again relocated to Los Angeles. We all feel that being here last year was the turning point for our group professionally and we hope to build upon the work we began a year ago. So for the time being our new home base is LA. We are currently searching for drummers and guitarists in the area and are hoping to get back into the studio to record some new material. We will keep you all posted of our progress and are eager to begin this new chapter in our evolution. As always thanks for listening and for your support. <br />
+<br />
+11/1 &amp; 3/05<br />
+Streamline plays The Bitter End (New York, NY)<br />
+<br />
+9/20/05<br />
+Streamline to Play in NYC<br />
+<br />
+On Thursday September 29th Streamline will perform at Pianos in NYC. The show is FREE and open to all. <br />
+<br />
+9/12/05<br />
+Live DVD shoot<br />
+<br />
+As part of an intensive promotional effort, Streamline will be filming their September 24th concert at Mercyhurst College. The footage will be edited and compiled to create a DVD to send to record labels and eventually to distribute through the website. All are welcome to attend this free event. The show lasts from 8:00-9:30 p.m in the main part of campus. For more information keep checking back or click here.<br />
+<br />
+8/17/05<br />
+Be sure to check out our brand new page on myspace. <br />
+<br />
+8/10/05<br />
+BRAND NEW STREAMLINE! (part 1) <br />
+<br />
+We are happy to finally make our new song 'ALL I NEED' available for your listening pleasure. This song is the first of two brand new tracks recorded this past week for our demo package. The second song will be posted tomorrow afternoon, so be sure to check back for that as well. Let us know what you think of our latest work, you can post your comments here . (The song should have started playing upon opening this page, but you can also access it by clicking here )<br />
+<br />
+8/4/05<br />
+Streamline in the Studio<br />
+<br />
+Streamline hit the studio today to begin work on a new 2 song demo which will be made available on the website sometime next week. The band is extremely excited about the new material and looks forward to releasing it. Keep checking back for updates. Also, there are several new pictures and videos on the 'Road' page from California and the studio, be sure to check them out here. <br />
+<br />
+7/19/05<br />
+Mike Hogan will be playing an acoustic set at the Trabant Chai Lounge this friday. The show begins at 8 p.m. and ends at 11. It is FREE to attend. <br />
+<br />
+7/4/05<br />
+Happy 4th of July everyone. The band has been keeping busy in Seattle working on some new songs. Check out the 'On the Road' page for the latest updates and new pictures and videos. <br />
+<br />
+6/25/05<br />
+Streamline has added a new song to the site, an acoustic version of 'The Meaning of Life'. You can hear this song by clicking on the audio player below or by clicking here.<br />
+<br />
+6/24/05<br />
+Lots of new pictures and videos added today, see them at the 'On the Road' page linked below. (the videos are in quicktime format and may take a minute to load, even though the screen does not appear immediately they are probably still working, they just take a few seconds)<br />
+<br />
+6/20/05<br />
+Monday morning the band hit the road for the West Coast in order to focus on writing and recording some new material. Throughout this creative process the band will frequently update the website with pictures and video clips highlighting the more interesting aspects of our endeavors. Be sure to check back often for all the latest updates. <br />
+<br />
+click here to visit our new 'On The Road' page<br />
+<br />
+Streamline goes 3-0! Winner of the 2005 Springfest Battle of the Bands sponsored by the Mercyhurst College SAC<br />
+<br />
+Winner of the 2004 &quot;Ugly Idol&quot; band contest sponsored by the Ten Ugly Men Festival, WZNE 94.1 The Zone &amp; Budweiser<br />
+<br />
+Winner of the 2004 Teddi Battle of the Bands Sponsored by St. John Fisher College &amp; Camp Good Days &amp; Special Times
+		</div>
+
+		
+
+		<div class="blog-post-meta">
+			<span class="localdate" title="America/New_York time zone">Jan 19, 2008</span> 
+				<a href="/newsarchive.cfm?postid=20530&feature=43578#comments">Add comment</a>
+			
+			<a class="addthis_button" href="http://www.addthis.com/bookmark.php" addthis:url="http://streamlineworld.com/newsarchive.cfm?feature=43578&postid=20530" addthis:title="News Items 6/2005 - 4/2007">Share</a>
+		</div>
+
+	</div>
+
+	
+	<div class="blog-post">
+		<h1 class="blog-post-title title"><a href="/newsarchive.cfm?feature=43578&amp;postid=19506">Living the Dream?</a> </h1>
+		<div>
+			Tuesday, October 30, 2007 <br />
+Living The Dream? <br />
+Hello Everyone!<br />
+<br />
+Our tour is well under way, and if you have been out to see us, THANK YOU! We have had a wonderful time, and it seems that the word is starting to spread! This has been very encouraging for us, and we appreciate you all. In comparison to our last tour, we have had better turn-outs, more excitement and support than ever! I must note though, that these gratifying moments have come at a high cost. If you have been to any of the shows, you may have heard some of the stories.<br />
+<br />
+It all started out when we got in the van the night of Tuesday, October 16th. With high hopes and fresh showers, we began our journey. By morning Brad was at the end of a drive shift, and was SO zealous, in fact, that he neglected to pay attention to the gas gauge. He will claim it is the gas gauge's fault, but either way, we ended up on the side of the road in Utah at about 9 a.m. Scholl (Jon) began the effort of a &quot;morning run&quot; to the gas station, but we had no idea how far away it was, so we figured it wouldn't be the best idea to send our little Jon Scholl out into the great wide open equipped with nothing more than running shoes, 6 bucks, and a gas can. I took the gas can, put my thumb out as visibly as I could, and before I knew it, I was on the edge of the passenger seat in a Big Rig driven by a sketchy (at best) guy named Scotty. We continued to the gas station. I looked through his &quot;Truck Stops&quot; book to find that the next gas station heading East was 12 miles away. Glad we didn't let Scholl go on that &quot;morning run,&quot; I arrived at the station, hitched a ride back with a nice man in a cargo van, and we were on our way!<br />
+<br />
+We went back West (our destination was East) to get gas because our atlas showed an exit with a town about 3 miles back. As we arrived at a mom and pop gas station, we found a hand written sign on the pump which read &quot;Sorry, no gas for a while.&quot; Our only option was go East, which was now about 15 or 16 miles the other way! As luck (or our gas tank...whichever you believe in) would have it, we ran out of gas AGAIN about a mile beyond where we originally ran out! Wasting no time, I proceeded to hitchhike for the third time of the day. I got another two gallons, and the nice man who picked me up actually brought me back too. We made it to the station, and I proceeded to the counter for the third time in one hour, only this time to fill our tank, not our gas can.<br />
+<br />
+Back on the road, proud of how punctually we solved our dilemma, we continued on with confidence that the worst was behind us. As we got into the Rocky mountains, we quickly realized our confidence was false. The Rocky Mountains are a force to be reckoned with!!!<br />
+<br />
+Lesson learned; Passing through Vail, Co. at dark during a freak snow storm is not a good scenario for a bunch of scrubby band guys with a van and trailer!<br />
+<br />
+We got completely stuck at the bottom of an 8 mile incline, and had to get a tow up the mountain. Eight miles, and 175 USD later, we were told that they had the road on the way down well managed, and that we would have no problem getting down the mountain. All LIES!! Soon we found ourselves spinning out of control into a full jackknife, facing oncoming traffic!! As we stopped, and stole a second to assess the situation only to find that there was an 18 Wheeler headed right for us! Our hands went immediately to the door handles. As we readied ourselves to jump ship, the huge truck missed us by inches! We got out of the jackknife, and crept down the mountain. We had another incline, and Tank and I were FREAKING OUT the whole time. Everyone was pretty edgy as Mike drove, and we climbed our way up. Eventually, we made our way down the mountain at about 5 miles per hour, and I think Tank and I lost years off of our life because we were so nervous!<br />
+<br />
+Continuing with hopes of making it to our first show on time, we got into Indiana just in time for a tornado warning, gale force winds, and a torrential downpour. Despite all of the factors stifling our progress, we made it on time! We got out of the van, stretched our legs after our 40 hour trip, and began to unload in some of the heaviest rain any of us have ever seen. <br />
+<br />
+The tour continued with success, and luck was on our side all the way through New York City. This is where our short luck decided to take a completely different direction. The story I am about to tell, friends, is what I would call the &quot;Grand Finale!&quot; It goes a little something like this...<br />
+<br />
+After a very trying day in Brooklyn and Queens, we were informed by Scholl that we had a flat tire. Mike and I figured we could fix it with little trouble. With teamwork, we &quot;fixed&quot; the tire. Mike upheld every end of his portion of the project and so did I...with one exception. I did not tighten the lug nuts on the tire!!!<br />
+<br />
+Brad and Tank had gone back to Rochester with Tank's family, and were safe at home watching the first game of the World Series. Scholl, Mike and Myself got into the van, unwise to the fate that lied ahead. As we got onto the George Washington Bridge, our poor van began to convulse as we bounced wildly inside.&nbsp; We looked outside to see the problem, and saw sparks everywhere!! Scholl immediately stopped in the middle of traffic (not that he could have gone anywhere even if he wanted to). Hastily, Mike and I got out and ran for the elusive tire! We retrieved the tire, and made a futile attempt at putting the tire back on while Scholl called the necessary authorities. We soon realized our van was irreparable at the moment, and it would need to be towed. The problem now was the trailer. We couldn't tow the two together. Ultimately, we needed a two tow trucks accompanied be their Port Authority personnel, (one flat bed for the trailer) and a couple trained officers of the law to control traffic. By &quot;control&quot; traffic, I mean &quot;stop.&quot; It was a Sunday afternoon, and we completely closed the westbound side of the George Washington Bridge for about an hour! We got towed to separate parking lots by the Port Authority. We were over a mile away from each other and were left with nothing but a consoling pat on the back and a phone number for a guy named George, who apparently owned a tow truck. I figured I'd give him a ring.<br />
+<br />
+George showed up in about fifteen minutes with his truck, his sidekick, a thick accent and some bad gas, which he clearly felt no embarrassment releasing in front of strangers. Despite the gas, he was very helpful. He called a friend, who owned a repair shop close by, and towed the van over. We later went to get the trailer with a truck from the repair shop. I negotiated a final price for the repair that night (which was later changed to a price that totaled three times the agreement) and we checked into a roach motel and got some sleep. They couldn't get the parts that night, but promised to get them in the morning to have the van ready by 1:00 p.m. the next day.<br />
+<br />
+We rose the next morning to find that they had, in fact, gotten the parts and began work on our humbled vehicle. The time they promised to have it ready was pushed back about two hours, and the price changed to a thousand dollars more than they said it would be, but we eventually settled somewhere in between. They had to replace the axle, the rear driver break system, and all the bits and pieces that go with that. All in all they were very nice, and seemingly honest guys. Tattered and torn, we climbed into the van. Almost exactly 24 hours after the event, we were on the road to our next show, and amazingly, we were on schedule to be there for load-in.<br />
+<br />
+Despite these horrible/wonderful/interesting/crazy/unnerving stories, we have had a very successful tour. We have smiles on our faces, and we have met an array of new friends, and lots of extraordinary and interesting people. Through all of our trials, we had the help of wonderful people throughout, and we would have never survived without them. Whether it is our listeners/fans, friends, family, city authority, or just the passer-by with a big heart, we appreciate the kindness very much, and can thank you for any of the success that we have had. I will sincerely say, after touring for about 6 or 7 years, I have put any of my past road stories under the table in just one week. We thank you all so very much for your support, and cannot wait for the future of this band.<br />
+<br />
+<br />
+Brian and Streamline<br />
+		</div>
+
+		
+
+		<div class="blog-post-meta">
+			<span class="localdate" title="America/New_York time zone">Dec 4, 2007</span> 
+				<a href="/newsarchive.cfm?postid=19506&feature=43578#comments">2 comments</a>           
+			
+			<a class="addthis_button" href="http://www.addthis.com/bookmark.php" addthis:url="http://streamlineworld.com/newsarchive.cfm?feature=43578&postid=19506" addthis:title="Living the Dream?">Share</a>
+		</div>
+
+	</div>
+
+	<div class="blog-post blog-controls">
+		<div class="blog-post-message">
+			<a href="/newsarchive.cfm?showstart=1">&laquo; Newer Posts</a> 
+		</div>
+	</div>
+<div class="blog-footer-rss-link">
+		<a href="/go/blogrss?id=9655"
+			title="subscribe to this this blog via RSS"><img class="page-button"
+			src="/common/images/rss-button.gif" width="36" height="14"
+			alt="rss" /></a>
+	</div> 
+		</div>
+		
+		
+	</div>
+
+								</div>
+							</td>
+						
+					</tr>
+				
+			</table>
+			</div>
+					</div>
+					
+					<div class="content-bottom"></div>
+					
+					
+
+					<div class="footer clear"></div>
+					
+				</div>
+				
+				
+				<script type="text/javascript" src="http://assets.sitezoogle.com/common/js/jquery/plugins/jquery.timer.js?1277844637"></script>
+				<script type="text/javascript" src="http://assets.sitezoogle.com/common/js/jquery/ajaxCFC/js/jquery.AjaxCFC.js?1277844637"></script>
+				
+				<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$('a[rel*=facebox]').each(function() {
+							var el = $(this);
+							el.facebox();
+						});
+					});
+				</script>
+			 <div class="footertext"></div>
+			</body>
+		</html>
+	

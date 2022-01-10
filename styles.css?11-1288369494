@@ -1,0 +1,120 @@
+
+/* template id: 23 */
+body {
+margin: 0px;
+background-color: #000000; background-image: url(http://assets.sitezoogle.com/templates/templatesource/23/images/background.jpg?1288369494);background-repeat: repeat-x;
+}
+.base {
+color: #ffffff;
+}
+.base * {
+border-color: #444444;
+}
+.base a {
+color: #3366FF;
+}
+.base a:hover {
+color: #ffffff;
+}
+.hover:hover {
+color: #ffffff;
+}
+.hover:hover a {
+color: #ffffff !important;
+}
+.highlighted {
+color: #ffffff !important;
+}
+body, 
+.content
+{
+font-family: trebuchet ms, trebuchet, tahoma; font-size: small; 
+color: #ffffff;
+}
+td
+{
+font-family: trebuchet ms, trebuchet, tahoma; font-size: small; 
+color: #ffffff;
+}
+a:link, a:visited
+{
+color:  #3366FF;
+}
+a:hover
+{
+color:  #ffffff;
+}
+h1, h1 a
+{
+font-size: medium;
+font-weight: bolder;
+color:  #ffffff !important;
+}
+h2, h3, h4, h5,
+h2 a, h3 a, h4 a, h5 a
+{
+font-size: medium;
+font-weight: bolder;
+color:  #ffffff !important;
+}
+.content .featheader td,
+.content .featheader th,
+.content td.featheader,
+.content th.featheader {
+}
+.events-list {
+}
+
+.navMenu li ul li {
+background-color: #333333;
+}
+.navMenu li ul li:hover {
+background: #333333 url(http://assets.sitezoogle.com/common/usersite/css/features/skins/images/trans15-white.png) !important;
+}
+.navMenu li ul li a {
+color:  #ffffff;
+}
+.cancel-button {
+color:  #3366FF !important;
+}
+.cancel-button:hover {
+color:  #ffffff !important;
+}
+
+.track-lyrics a {
+color: #ffffff;
+}
+.track-lyrics a:hover {
+color: #3366FF;
+}
+.popup {
+
+padding: 0;
+}
+ul.events-list li.date {
+padding: 7px;
+}
+.events-calendar {
+}
+
+/*
+Turns off link color for anchor tags
+*/
+
+.FCK__AnchorC {
+color:  #ffffff !important;
+}
+#twitter_div {
+padding: 0 15px 40px 0;
+margin: 0 0 15px 0;
+color: #ffffff;
+}
+#twitter_div li {
+border-top: 1px solid #444444;
+}
+.download_purchase {
+color: #ffffff;
+border: 1px solid #444444;
+padding:10px;
+margin-bottom:1.0em;
+}
